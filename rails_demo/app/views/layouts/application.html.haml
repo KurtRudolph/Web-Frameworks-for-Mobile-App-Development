@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title DemoTest
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %div{ data: {role:'page'}}
+      %div{ data: {role: 'header'}}
+        = link_to 'Home', home_url, data: {icon: 'home'}
+        %h1 Page Title
+      %div{ data: {role: 'content'}}
+        %p Page content goes here.
+        =yield
+      %div{ data: {role: 'footer', position: 'fixed'}}
+        %h1 Page Footer

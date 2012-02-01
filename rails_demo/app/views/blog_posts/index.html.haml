@@ -1,0 +1,9 @@
+= link_to 'New Blog post', new_blog_post_path, data: {role: 'button'}
+%h1 Listing blog_posts
+- @blog_posts.each do |blog_post|
+  %div{ data: {role: 'collapsible'}}
+    %h3= blog_post.title
+    %p= blog_post.content
+    %h4= blog_post.user
+    = link_to 'Edit', edit_blog_post_path(blog_post), data: {role: 'button'}
+    = link_to 'Destroy', blog_post, confirm: 'Are you sure?', method: :delete, data: {role: 'button'}
