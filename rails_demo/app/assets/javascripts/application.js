@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+// require 'jquery_mobile_custom.js'
 //= require jquery_mobile
 //= require_tree .
